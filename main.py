@@ -40,7 +40,7 @@ def download(www_url):
             for chunk in r.iter_content(buffer_size):
                 f.write(chunk)
                 progress_bar.update(len(chunk))
-
+  
     # Cria uma barra de progresso com o tamanho total do arquivo
     with tqdm(total=total_size, unit='B', unit_scale=True, desc="Download") as progress_bar:
         # Cria uma lista de threads e começa cada thread
